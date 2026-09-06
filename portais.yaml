@@ -1,0 +1,99 @@
+# Registro de portais — como colher metadados de cada um
+# tipo: dominiopublico-jsp | dspace-rest | oai-pmh | scielo-articlemeta | vufind-html | sophia-html
+portais:
+  dominiopublico:
+    nome: "Portal Domínio Público (MEC)"
+    tipo: dominiopublico-jsp
+    url: "http://www.dominiopublico.gov.br/pesquisa/PesquisaObraForm.jsp"
+    tamanho_aprox: 198000
+    status: "bloqueio Cloudflare p/ datacenter; rodar em rede residencial"
+
+  arca:
+    nome: "Arca Fiocruz"
+    tipo: dspace-rest
+    ui: "https://arca.fiocruz.br"
+    api: "https://api.arca.fiocruz.br/api"
+    tamanho_aprox: 70000
+    status: "REST verificado OK (DSpace 9.3)"
+
+  camara-bd:
+    nome: "Biblioteca Digital da Câmara"
+    tipo: dspace-rest
+    ui: "https://bd.camara.leg.br/bd"
+    api: "https://bd.camara.leg.br/bd/server/api"
+    tamanho_aprox: 6000
+    status: "REST/OAI não expostos; tentar HTML do DSpace Angular ou browser"
+
+  bdsf-senado:
+    nome: "BDSF Senado Federal"
+    tipo: oai-pmh
+    ui: "https://www2.senado.leg.br/bdsf"
+    oai: "https://www2.senado.leg.br/bdsf/oai/request"
+    tamanho_aprox: 480000
+    status: "WAF do Senado bloqueia robôs; OAI provável mas não confirmado via curl"
+
+  bbm-usp:
+    nome: "Brasiliana Mindlin USP"
+    tipo: dspace-html
+    ui: "https://digital.bbm.usp.br"
+    tamanho_aprox: 4600
+    status: "DSpace 6.3 sem OAI público; crawl simple-search + /handle/bbm-ext"
+
+  bndigital:
+    nome: "Biblioteca Nacional Digital"
+    tipo: sophia-html
+    ui: "https://bndigital.bn.gov.br"
+    catalogo: "https://acervobndigital.bn.gov.br/sophia/"
+    objetos: "https://objdigital.bn.br"
+    tamanho_aprox: 3000000
+    status: "WP+SopiA; 403 p/ bots; usar UA de browser"
+
+  bdtd:
+    nome: "BDTD IBICT (agregador VuFind)"
+    tipo: vufind-html
+    ui: "https://bdtd.ibict.br/vufind"
+    tamanho_aprox: 1000000
+    status: "só metadados (texto na origem); instável p/ robôs hoje"
+
+  scielo:
+    nome: "SciELO Brasil"
+    tipo: scielo-articlemeta
+    api: "http://articlemeta.scielo.org/api/v1"
+    tamanho_aprox: 400000
+    status: "ArticleMeta REST verificado OK"
+
+  scielo-livros:
+    nome: "SciELO Livros"
+    tipo: oai-pmh
+    oai: "https://oai.books.scielo.org/oai-pmh"
+    tamanho_aprox: 21000
+    status: "OAI dedicado verificado OK (cert SSL vencido; coletor usa fallback sem verificação)"
+
+  ipea:
+    nome: "Repositório IPEA"
+    tipo: oai-pmh
+    ui: "https://repositorio.ipea.gov.br"
+    oai: "https://repositorio.ipea.gov.br/server/oai/request"
+    tamanho_aprox: 19000
+    status: "DSpace 9.2, OAI verificado OK"
+
+  wikisource:
+    nome: "Wikisource em português"
+    tipo: mediawiki-api
+    api: "https://pt.wikisource.org/w/api.php"
+    tamanho_aprox: 39000
+    status: "MediaWiki API verificado OK (168k páginas, 39k artigos)"
+
+  oasisbr:
+    nome: "OasisBR IBICT (agregador)"
+    tipo: vufind-rss
+    ui: "https://oasisbr.ibict.br/vufind"
+    tamanho_aprox: 490000
+    status: "VuFind 7.1.1 sem OAI; RSS funciona mas instável/challenge por IP"
+
+  hemeroteca:
+    nome: "Hemeroteca Digital BN"
+    tipo: docreader-html
+    ui: "https://memoria.bn.gov.br/hdb/periodico.aspx"
+    tamanho_aprox: 10000000
+    status: "DocReader ASP.NET sem API; coletor lê metadados por bib (--bibs); catálogo completo exige interação"

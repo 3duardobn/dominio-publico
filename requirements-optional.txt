@@ -1,0 +1,4 @@
+# Dependências opcionais — só se precisar do fallback de navegador
+# (quando o portal bloqueia requests com Cloudflare/WAF).
+# Instalar com: pip install -r requirements-optional.txt && playwright install chrome
+playwright>=1.40
