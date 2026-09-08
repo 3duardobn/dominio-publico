@@ -78,6 +78,13 @@ Metadados multi-portal vão para a tabela `registros`
 5. `repositorio.ipea.gov.br` — IPEA ✅ coletor (`ipea` via OAI DSpace 9.2, ~19k itens)
 6. `pt.wikisource.org` — Wikisource PT ✅ coletor (`wikisource` via MediaWiki API, ~39k artigos)
 
+## Licença
+
+Este projeto é distribuído sob a **GNU General Public License v3.0 (GPL-3.0)**.
+Você pode usar, estudar, modificar e redistribuir este software, desde que
+as obras derivadas também sejam licenciadas sob GPL-3.0. Veja o arquivo
+[`LICENSE`](LICENSE) para os termos completos.
+
 ---
 
 ## Módulo original: Portal Domínio Público
