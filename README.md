@@ -1,5 +1,8 @@
 # Indexador de metadados — acervos públicos brasileiros
 
+[![0rwx: x](https://img.shields.io/badge/0rwx-x%20%7C%20execute-critical?style=flat-square)](https://0rwx.com)
+
+
 Copia local de **metadados** para análise: SQLite + JSON + CSV.
 Começou pelo Portal Domínio Público e agora cobre vários portais (`portais.yaml`).
 
@@ -77,6 +80,12 @@ Metadados multi-portal vão para a tabela `registros`
 4. `bdtd.ibict.br` — BDTD nacional (teses/dissertações)
 5. `repositorio.ipea.gov.br` — IPEA ✅ coletor (`ipea` via OAI DSpace 9.2, ~19k itens)
 6. `pt.wikisource.org` — Wikisource PT ✅ coletor (`wikisource` via MediaWiki API, ~39k artigos)
+
+## Transparência de IA (0rwx: x)
+
+Este projeto adota a classificação do **[Framework 0rwx](https://0rwx.com/)** no nível **x (Execute / "I curate")**.
+
+Desenvolvido em fluxo *vibe coding* com assistência de sistemas agênticos de IA. A arquitetura e scripts são gerados com auxílio de modelos, atuando o mantenedor na curadoria, definição de pipelines e validação dos dados extraídos. Consulte [0rwx.md](0rwx.md) para detalhes.
 
 ## Licença
 
